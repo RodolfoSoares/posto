@@ -30,7 +30,24 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+gem 'execjs'
+gem 'therubyracer'
+
+gem 'formtastic', '~> 2.0.0'
+gem 'haml', '~> 3.1.0'
+gem 'inherited_resources', '~> 1.3.0'
+gem 'brazilian-rails', '~>3.0.0'
+gem 'cocoon', '~>1.0.0'
+
+
+
+group :development, :test do
+
+  gem 'capybara', '~> 1.1.2'
+  gem 'factory_girl_rails', '~> 1.6.0'
+  gem 'rspec-rails', '~> 2.8.1'
+  gem 'valid_attribute', '~> 1.2.0'
+  gem 'launchy'
+  gem 'database_cleaner'
+
 end
