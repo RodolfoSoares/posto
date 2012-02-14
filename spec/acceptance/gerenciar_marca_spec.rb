@@ -26,6 +26,14 @@ feature 'gerenciar marca' do
     
   end
  
+   scenario 'excluir marca' do #, :javascript => true do
+    marca = FactoryGirl.create(:marca)
+    visit marcas_path
+
+    click_link 'Excluir'
+    
+    Marca.count.should == 0
+  end
 end
 
 
