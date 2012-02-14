@@ -15,6 +15,18 @@ feature 'gerenciar marca' do
    
     page.should have_content 'Nome: Ipiranga'
   end
-
+    scenario 'alterar marca' do #, :javascript => true do
+    marca = FactoryGirl.create(:marca)
+    visit edit_marca_path(marca)
+   fill_in 'Nome', :with => 'Ipiranga'
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Nome: Ipiranga'
+    
+  end
  
 end
+
+
+
