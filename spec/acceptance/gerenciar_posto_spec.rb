@@ -80,5 +80,13 @@ feature 'gerenciar postocombustivel' do
     page.should have_content 'Mediageral: 3'
     page.should have_content 'Marca: Ipyranga'
   end
- 
+   scenario 'Excluir postocombustivel' do #, :javascript => true do
+
+    marca = FactoryGirl.create(:marca,:nome => 'Ipyranga')
+    postocombustivel = FactoryGirl.create(:postocombustivel, :marca => marca)
+
+    visit postocombustivels_path
+    click_link 'Excluir'
+
+  end
 end
