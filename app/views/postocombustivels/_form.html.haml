@@ -1,0 +1,15 @@
+= semantic_form_for(@postocombustivel) do |f|
+    = f.input :nome , :label => 'Nome'
+    = f.input :endereco , :label => 'Endereço'
+    = f.input :telefone , :label => 'Telefone'
+    = f.input :cep , :label => 'Cep'
+    = f.input :cnpj , :label => 'Cnpj'
+    = f.input :email , :label => 'Email'
+    = f.input :mediacombustivel , :label => 'Média do combustivel'
+    = f.input :mediaatendimento , :label => 'Média do atendimento'
+    = f.input :mediapreco , :label => 'Média do preço'
+    = f.input :mediageral , :label => 'Média Geral '
+    = f.input :marca , :member_label => :nome,:label => 'Marca'
+    = f.submit 'Salvar'
+
+ 

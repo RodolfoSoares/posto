@@ -1,0 +1,43 @@
+<h1>Listing postocombustivels</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Endereco</th>
+    <th>Telefone</th>
+    <th>Cep</th>
+    <th>Cnpj</th>
+    <th>Email</th>
+    <th>Mediacombustivel</th>
+    <th>Mediaatendimento</th>
+    <th>Mediapreco</th>
+    <th>Mediageral</th>
+    <th>Marca</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @postocombustivels.each do |postocombustivel| %>
+  <tr>
+    <td><%= postocombustivel.nome %></td>
+    <td><%= postocombustivel.endereco %></td>
+    <td><%= postocombustivel.telefone %></td>
+    <td><%= postocombustivel.cep %></td>
+    <td><%= postocombustivel.cnpj %></td>
+    <td><%= postocombustivel.email %></td>
+    <td><%= postocombustivel.mediacombustivel %></td>
+    <td><%= postocombustivel.mediaatendimento %></td>
+    <td><%= postocombustivel.mediapreco %></td>
+    <td><%= postocombustivel.mediageral %></td>
+    <td><%= postocombustivel.marca %></td>
+    <td><%= link_to 'Show', postocombustivel %></td>
+    <td><%= link_to 'Edit', edit_postocombustivel_path(postocombustivel) %></td>
+    <td><%= link_to 'Destroy', postocombustivel, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Postocombustivel', new_postocombustivel_path %>

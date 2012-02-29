@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @postocombustivel.nome %>
+</p>
+
+<p>
+  <b>Endereço:</b>
+  <%= @postocombustivel.endereco %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @postocombustivel.telefone %>
+</p>
+
+<p>
+  <b>Cep:</b>
+  <%= @postocombustivel.cep %>
+</p>
+
+<p>
+  <b>Cnpj:</b>
+  <%= @postocombustivel.cnpj %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @postocombustivel.email %>
+</p>
+
+<p>
+  <b>Mediacombustivel:</b>
+  <%= @postocombustivel.mediacombustivel %>
+</p>
+
+<p>
+  <b>Mediaatendimento:</b>
+  <%= @postocombustivel.mediaatendimento %>
+</p>
+
+<p>
+  <b>Mediapreco:</b>
+  <%= @postocombustivel.mediapreco %>
+</p>
+
+<p>
+  <b>Mediageral:</b>
+  <%= @postocombustivel.mediageral %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @postocombustivel.marca.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_postocombustivel_path(@postocombustivel) %> |
+<%= link_to 'Back', postocombustivels_path %>

@@ -11,12 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214123119) do
+ActiveRecord::Schema.define(:version => 20120228134147) do
 
   create_table "marcas", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "postocombustivels", :force => true do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "telefone"
+    t.string   "cep"
+    t.string   "cnpj"
+    t.string   "email"
+    t.string   "mediacombustivel"
+    t.string   "mediaatendimento"
+    t.string   "mediapreco"
+    t.string   "mediageral"
+    t.integer  "marca_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "postocombustivels", ["marca_id"], :name => "index_postocombustivels_on_marca_id"
 
 end
