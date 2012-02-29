@@ -1,0 +1,8 @@
+= semantic_form_for(@postousuario) do |f|
+    = f.input :notaatendimento , :label => 'Notaatendimento'
+    = f.input :notageral , :label => 'Notageral'
+    = f.input :usuario , :member_label => :login,:label => 'Usuario'
+    = f.input :postocombustivel , :member_label => :nome,:label => 'Postocombustivel'
+    = f.submit 'Salvar'
+
+ 

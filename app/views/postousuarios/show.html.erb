@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Notaatendimento:</b>
+  <%= @postousuario.notaatendimento %>
+</p>
+
+<p>
+  <b>Notageral:</b>
+  <%= @postousuario.notageral %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @postousuario.usuario.login %>
+</p>
+
+<p>
+  <b>Postocombustivel:</b>
+  <%= @postousuario.postocombustivel.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_postousuario_path(@postousuario) %> |
+<%= link_to 'Back', postousuarios_path %>

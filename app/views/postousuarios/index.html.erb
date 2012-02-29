@@ -1,0 +1,29 @@
+<h1>Listing postousuarios</h1>
+
+<table>
+  <tr>
+    <th>Notaatendimento</th>
+    <th>Notageral</th>
+    <th>Usuario</th>
+    <th>Postocombustivel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @postousuarios.each do |postousuario| %>
+  <tr>
+    <td><%= postousuario.notaatendimento %></td>
+    <td><%= postousuario.notageral %></td>
+    <td><%= postousuario.usuario %></td>
+    <td><%= postousuario.postocombustivel %></td>
+    <td><%= link_to 'Show', postousuario %></td>
+    <td><%= link_to 'Edit', edit_postousuario_path(postousuario) %></td>
+    <td><%= link_to 'Excluir', postousuario, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Postousuario', new_postousuario_path %>

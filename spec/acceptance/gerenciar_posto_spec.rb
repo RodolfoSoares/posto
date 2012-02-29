@@ -9,7 +9,7 @@ feature 'gerenciar postocombustivel' do
   scenario 'incluir postocombustivel' do
 
    
-    postocombustivel = FactoryGirl.create(:marca,:nome => 'Ipyranga')  
+    marca = FactoryGirl.create(:marca,:nome => 'Ipyranga')  
     visit new_postocombustivel_path
 
 
