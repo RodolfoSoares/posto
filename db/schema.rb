@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228134147) do
+ActiveRecord::Schema.define(:version => 20120229133659) do
 
   create_table "marcas", :force => true do |t|
     t.string   "nome"
@@ -36,5 +36,15 @@ ActiveRecord::Schema.define(:version => 20120228134147) do
   end
 
   add_index "postocombustivels", ["marca_id"], :name => "index_postocombustivels_on_marca_id"
+
+  create_table "usuarios", :force => true do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "telefone"
+    t.string   "email"
+    t.string   "login"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
