@@ -46,4 +46,13 @@ feature 'gerenciar usuario' do
     page.should have_content 'Email: whanderson@gmail.com'
     page.should have_content 'Login: whandinhototoso'
     end
+     
+   scenario 'excluir usuario' do #, :javascript => true do
+    usuario = FactoryGirl.create(:usuario)
+    visit usuarios_path
+
+    click_link 'Excluir'
+    
+    Usuario.count.should == 0
+  end
   end
