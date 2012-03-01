@@ -55,4 +55,12 @@ feature 'gerenciar postoxusuario' do
     page.should have_content 'Usuario: Juca'
     page.should have_content 'Postocombustivel: Arara'
     end
+    scenario 'excluir usuario' do #, :javascript => true do
+    postousuario = FactoryGirl.create(:postousuario)
+    visit postousuarios_path
+
+    click_link 'Excluir'
+    
+    Postousuario.count.should == 0
+  end
   end
