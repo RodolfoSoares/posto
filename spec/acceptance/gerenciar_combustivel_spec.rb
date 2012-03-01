@@ -25,4 +25,13 @@ feature 'gerenciar combustivel' do
     page.should have_content 'Tipo: Alcool'
     
   end
+ 
+   scenario 'excluir combustivel' do #, :javascript => true do
+    combustivel = FactoryGirl.create(:combustivel)
+    visit combustivels_path
+
+    click_link 'Excluir'
+    
+    Combustivel.count.should == 0
+  end
 end
