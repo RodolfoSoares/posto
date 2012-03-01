@@ -1,4 +1,6 @@
 Posto::Application.routes.draw do
+  resources :combustivels
+
   resources :postousuarios
 
   resources :usuarios

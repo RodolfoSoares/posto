@@ -1,0 +1,23 @@
+<h1>Listing combustivels</h1>
+
+<table>
+  <tr>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @combustivels.each do |combustivel| %>
+  <tr>
+    <td><%= combustivel.tipo %></td>
+    <td><%= link_to 'Show', combustivel %></td>
+    <td><%= link_to 'Edit', edit_combustivel_path(combustivel) %></td>
+    <td><%= link_to 'Excluir', combustivel, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Combustivel', new_combustivel_path %>
