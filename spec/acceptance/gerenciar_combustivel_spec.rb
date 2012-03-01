@@ -15,4 +15,14 @@ feature 'gerenciar combustivel' do
    
     page.should have_content 'Tipo: Alcool'
   end
+    scenario 'alterar combustivel' do #, :javascript => true do
+    combustivel = FactoryGirl.create(:combustivel)
+    visit edit_combustivel_path(combustivel)
+   fill_in 'Tipo', :with => 'Alcool'
+        
+    click_button 'Salvar'
+   
+    page.should have_content 'Tipo: Alcool'
+    
+  end
 end
