@@ -31,12 +31,11 @@ feature 'gerenciar postoxusuario' do
 
     end
 
-    scenario 'alterar postocombustivel ' do #, :javascript => true do
+    scenario 'alterar postousuario ' do #, :javascript => true do
 
-    usuario = FactoryGirl.create(:usuario,:login => 'Juca') 
-    postocombustivel = FactoryGirl.create(:postocombustivel,:nome => 'Arara')  
+    usuario = FactoryGirl.create(:usuario, :login => 'Juca') 
+    postocombustivel = FactoryGirl.create(:postocombustivel, :nome => 'Arara')  
     postousuario = FactoryGirl.create(:postousuario, :usuario => usuario , :postocombustivel => postocombustivel) 
-
 
     visit edit_postousuario_path(postousuario)
 
